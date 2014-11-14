@@ -1,0 +1,76 @@
+body header{
+    background-color: #efefef;
+    /*font-weight: bold;*/
+}
+body header .login{
+    float: left;
+    margin-left: 200px;
+}
+body header .register{
+    margin-left: 20px;
+}
+body header .orderList{
+    margin-left: 600px;
+}
+body header .shoppingCar{
+    margin-left: 20px;
+}
+.leftNavi{
+    float: left;
+    background-color: #efefef;
+    margin-left: 200px;
+    font-size: 20px;
+    width: 180px;
+    height: 400px;
+    margin-top: 20px;
+}
+.leftNavi ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+.leftNavi ul li{
+    margin-top: 30px;
+}
+.middlePic {
+    float: left;
+    margin-top: 40px;
+}
+.middlePic img{
+    height: 400px;
+}
+.rightDesp{
+    margin-left: 100px;
+    margin-top: 39px;
+    float: left;
+}
+.rightDesp p{
+    text-align: right;
+}
+.hardware {
+    clear: both;
+    margin-left: 200px;
+}
+hr {
+    background-color: black;
+    color: black;
+    height: 2px;
+    border: 0px;
+    clear: both;
+    margin-left: 0px;
+    width: 850px;
+}
+.hardware > p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.hardware > div{
+    float: left;
+    text-align: center;
+}
+.hardware > div + div{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.hardware img{
+    width: 200px;
+}
