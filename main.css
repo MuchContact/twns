@@ -1,6 +1,10 @@
+﻿body{
+	font-family: '微软雅黑','Helvetica Neue',sans-serif,SimHei;
+}
 body header{
     background-color: #efefef;
-    /*font-weight: bold;*/
+	font-size: 18px;
+    font-weight: bold;
 }
 body header .login{
     float: left;
@@ -10,11 +14,12 @@ body header .register{
     margin-left: 20px;
 }
 body header .orderList{
-    margin-left: 600px;
+    margin-left: 650px;
 }
 body header .shoppingCar{
     margin-left: 20px;
 }
+
 .leftNavi{
     float: left;
     background-color: #efefef;
@@ -45,10 +50,13 @@ body header .shoppingCar{
 }
 .rightDesp p{
     text-align: right;
+	font-size: 20px;
 }
-.hardware {
+
+.horizontalGallery {
     clear: both;
     margin-left: 200px;
+	margin-top: 200px;
 }
 hr {
     background-color: black;
@@ -57,20 +65,40 @@ hr {
     border: 0px;
     clear: both;
     margin-left: 0px;
-    width: 850px;
+    width: 880px;
 }
-.hardware > p{
+.horizontalGallery > p{
     font-weight: bold;
     font-size: 20px;
+	margin-bottom: 0px;
+	
 }
-.hardware > div{
+.horizontalGallery > div{
     float: left;
     text-align: center;
+	margin-left: 40px;
 }
-.hardware > div + div{
+.horizontalGallery > div > div:first-child{
     font-weight: bold;
     margin-bottom: 30px;
 }
-.hardware img{
+.horizontalGallery img{
     width: 200px;
+}
+
+footer img{
+	width: 350px;
+}
+.footer{
+	clear: both;
+	float: left;
+	margin-left: 200px;
+	margin-top: 50px;
+}
+.footer div:first-child{
+	float: left;
+}
+.footer div:first-child + div{
+	float: left;
+	margin-left: 200px;
 }
