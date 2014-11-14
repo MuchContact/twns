@@ -1,22 +1,22 @@
 ﻿body{
 	font-family: '微软雅黑','Helvetica Neue',sans-serif,SimHei;
 }
-body header{
+header{
     background-color: #efefef;
 	font-size: 18px;
     font-weight: bold;
 }
-body header .login{
+header .login{
     float: left;
     margin-left: 200px;
 }
-body header .register{
+header .register{
     margin-left: 20px;
 }
-body header .orderList{
+header .orderList{
     margin-left: 650px;
 }
-body header .shoppingCar{
+header .shoppingCar{
     margin-left: 20px;
 }
 
@@ -36,6 +36,7 @@ body header .shoppingCar{
 .leftNavi ul li{
     margin-top: 30px;
 }
+
 .middlePic {
     float: left;
     margin-top: 40px;
@@ -43,6 +44,7 @@ body header .shoppingCar{
 .middlePic img{
     height: 400px;
 }
+
 .rightDesp{
     margin-left: 100px;
     margin-top: 39px;
