@@ -6,24 +6,26 @@ header{
 	font-size: 18px;
     font-weight: bold;
 }
-header .login{
-    float: left;
-    margin-left: 200px;
-}
+
 header .register{
     margin-left: 20px;
 }
 header .orderList{
-    margin-left: 650px;
+    margin-right: 20px;
 }
-header .shoppingCar{
-    margin-left: 20px;
+header .leftMenu{
+	display: inline;
+	float: right;
+}
+
+.content{
+	margin: 0 auto; 
+	width: 900px;
 }
 
 .leftNavi{
     float: left;
     background-color: #efefef;
-    margin-left: 200px;
     font-size: 20px;
     width: 180px;
     height: 400px;
@@ -46,9 +48,8 @@ header .shoppingCar{
 }
 
 .rightDesp{
-    margin-left: 100px;
     margin-top: 39px;
-    float: left;
+    float: right;
 }
 .rightDesp p{
     text-align: right;
@@ -57,22 +58,13 @@ header .shoppingCar{
 
 .horizontalGallery {
     clear: both;
-    margin-left: 200px;
 	margin-top: 200px;
-}
-hr {
-    background-color: black;
-    color: black;
-    height: 2px;
-    border: 0px;
-    clear: both;
-    margin-left: 0px;
-    width: 880px;
 }
 .horizontalGallery > p{
     font-weight: bold;
     font-size: 20px;
-	margin-bottom: 0px;
+	border-bottom: 3px solid;
+	padding-bottom: 10px;
 	
 }
 .horizontalGallery > div{
@@ -93,14 +85,13 @@ footer img{
 }
 .footer{
 	clear: both;
-	float: left;
-	margin-left: 200px;
-	margin-top: 50px;
+	margin-top: 300px;
 }
-.footer div:first-child{
+.footerLeft{
 	float: left;
+	display: inline;
 }
-.footer div:first-child + div{
-	float: left;
-	margin-left: 200px;
+.footerRight{
+	float: right;
+	display: inline;
 }
