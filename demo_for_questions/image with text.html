@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>YWJ的商店</title>
+    <link rel="stylesheet" href="ywj.css">
+	<style type="text/css">
+		.pic{ 
+			width:200px; 
+			background: url(./pics/disk/1TB-disk.jpg)
+			no-repeat;
+			background-size: 200px 200px; 
+		} 
+		.text{ 
+			width:200; 
+			height:200px; 
+			background:#FFF; 
+			opacity:0;
+		} 
+		.pic:hover .text { 
+			opacity:0.6; 
+			text-align:justify; 
+			color:#000000; 
+			font-size:20px;
+			font-weight:700; 
+			font-family:"Times New Roman", Times, serif;
+			padding-left:30px;
+		}
+		.imgItem{
+			float: left;
+			text-align: center;
+			margin: 0 40px;
+		}
+		.buttonOverImg{
+			margin-top: 90px;
+			font-size: 20px;  
+			font-weight: 700; 
+			cursor: pointer;
+		}
+		.buttonOverImgSurplus{
+			margin-left: 20px;
+		}
+		.buttonOverImg:hover {
+			background-color: #4d90fe;
+		}
+	</style>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="#ct1">光盘</a><br/><br/>
+      </div>
+      <div class="header-center">
+        <a href="http://www.baidu.com"><img src="./pics/disk/fancy-disk.jpg" alt="" /></a>
+      </div>
+      <div class="header-right">
+        <h2>小清新光盘</h2>
+        <h2 class="deeppink">2GB文艺小清新光盘10张</h2>
+        <h2>价格：￥35.00</h2>
+      </div>
+      
+	  
+    </header>
+
+    <div class="disk">
+      <h2 class="disk-title" id="ct1">光盘</h2>
+      <hr size="3" color="black" noshade>
+	  <input id="productName" placeholder="请输入商品名称"></input>
+	  <input id="productImg" placeholder="请输入图片链接"></input>
+	  <input id="productDesc" placeholder="请输入商品描述"></input>
+	  <button onclick="add()">add</button><br/>
+    <input id="search" placeholder="请输入查询关键字" onkeyup="search(this.value)"></input>
+      <div id="container">
+		<div class="imgItem">
+			<div>固态硬盘</div>
+			<div class="pic" >
+				<div class="text">
+					<button class="buttonOverImg">编辑
+					</button>
+					<button class="buttonOverImg buttonOverImgSurplus">删除
+					</button>
+				</div>
+			</div>
+			<div>128G 固态硬盘 250元</div>
+		</div>
+	  </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        <h2>联系我们</h2>
+        <p>
+          ·武汉市洪山区光谷世界城广场1616
+        </p>
+        <p>
+          ·Email:pandar_disk@gmail.com
+        </p>
+        <p>
+          ·Tel:11011011011
+        </p>
+      </div>
+      <div class="footer-right">
+        <h2>我们的位置</h2>
+        <img src="./pics/position.png" />
+      </div>
+
+    </footer>
+    <br/>
+    <br/>
+  </body>
+</html>
