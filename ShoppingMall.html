@@ -5,6 +5,10 @@
     <title>网上商城</title>
 </head>
 <link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/fakedata.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <body>
 
     <header>
@@ -23,9 +27,9 @@
 		<div>
 			<div class="leftNavi">
 				<ul>
-					<li>光盘</li>
-					<li>U盘</li>
-					<li>硬盘</li>
+					<li><a href="#opticdisks">光盘</a></li>
+					<li><a href="#udisks">U盘</a></li>
+					<li><a href="#harddisks">硬盘</a></li>
 				</ul>
 			</div>
 			<div class="middlePic">
@@ -39,86 +43,73 @@
 			</div>
 		</div>
 		
-		<div class="horizontalGallery">
-			<p>硬盘</p>
-			
-			<div>
-				<div>固态硬盘</div>
-				<a href="#">
-					<img src="./pics/hard-disk/ssd-disk.JPG">
-				</a>
-				<div>128G 固态硬盘 250元</div>
-			</div>
-			<div>
-				<div>台式机硬盘</div>
-				<a href="#">
-					<img src="./pics/hard-disk/normal-disk.jpg">
-				</a>
-				<div>500G 台式机硬盘 300元</div>
-			</div>
-			<div>
-				<div>笔记本硬盘</div>
-				<a href="#">
-					<img src="./pics/hard-disk/small-disk.jpg">
-				</a>
-				<div>320G 笔记本用小硬盘 250元</div>
-			</div>
-		</div>
-
-		<div class="horizontalGallery">
+		<div id="opticdisks" class="horizontalGallery">
 			<p>光盘</p>
-			
-			<div>
-				<div>小清新光盘</div>
-				<a href="#">
-					<img src="./pics/disk/fancy-disk.jpg">
-				</a>
-				<div>小清新、小文艺 35元/10张</div>
-			</div>
-			<div>
-				<div>婚庆光盘</div>
-				<a href="#">
-					<img src="./pics/disk/marriage-disk.jpg">
-				</a>
-				<div>记录你的美好瞬间 50元/10张</div>
-			</div>
-			<div>
-				<div>1TB大容量光盘</div>
-				<a href="#">
-					<img src="./pics/disk/1TB-disk.jpg">
-				</a>
-				<div>解放你的硬盘 100元/10张</div>
-			</div>
+			<input id="productName" placeholder="请输入商品名"></input>
+			<input id="productImg" placeholder="请输入图片链接"></input>
+			<input id="productDesc" placeholder="请输入商品描述"></input>	  
+			<button id="addProduct" onclick="add()">添加</button>
+		    <button id="changeProduct" style="display:none" onclick="commitChange()">提交修改</button>
+		    <button id="cancelChange" style="display:none" onclick="cancelChange()">取消</button>
+			<br>
+			<input id="search" placeholder="请输入关键词" onkeyup="search()"></input>
+			<div id="container"></div>  
 		</div>
 		
-		<div class="horizontalGallery">
+		<div id="udisks" class="horizontalGallery">
 			<p>U盘</p>
 			
-			<div>
-				<div>32G U盘</div>
+			<div class="galleryItem">
+				<div class="galleryItemTitle">32G U盘</div>
 				<a href="#">
-					<img src="./pics/U-disk/32GB-U-disk.jpg">
+					<img class="galleryImg" src="./pics/U-disk/32GB-U-disk.jpg">
 				</a>
 				<div>32G小清新、小文艺 50元</div>
 			</div>
-			<div>
-				<div>手机SD卡读卡器</div>
+			<div class="galleryItem">
+				<div class="galleryItemTitle">手机SD卡读卡器</div>
 				<a href="#">
-					<img src="./pics/U-disk/mobile-phone-disk.jpg">
+					<img class="galleryImg" src="./pics/U-disk/mobile-phone-disk.jpg">
 				</a>
 				<div>移动生活，你我共享 20元</div>
 			</div>
-			<div>
-				<div>小猪卡通U盘</div>
+			<div class="galleryItem">
+				<div class="galleryItemTitle">小猪卡通U盘</div>
 				<a href="#">
-					<img src="./pics/U-disk/pig-U-disk.jpg">
+					<img class="galleryImg" src="./pics/U-disk/pig-U-disk.jpg">
 				</a>
 				<div>萌爆你的双眼 20元</div>
 			</div>
 		</div>
+
+		<div id="harddisks" class="horizontalGallery">
+			<p>硬盘</p>
+
+			<div class="galleryItem">
+				<div class="galleryItemTitle">固态硬盘</div>
+				<a href="#">
+					<img class="galleryImg" src="./pics/hard-disk/ssd-disk.JPG">
+				</a>
+				<div>128G 固态硬盘 250元</div>
+			</div>
+			<div class="galleryItem">
+				<div class="galleryItemTitle">台式机硬盘</div>
+				<a href="#">
+					<img class="galleryImg" src="./pics/hard-disk/normal-disk.jpg">
+				</a>
+				<div>500G 台式机硬盘 300元</div>
+			</div>
+			<div class="galleryItem">
+				<div class="galleryItemTitle">笔记本硬盘</div>
+				<a href="#">
+					<img class="galleryImg" src="./pics/hard-disk/small-disk.jpg">
+				</a>
+				<div>320G 笔记本用小硬盘 250元</div>
+			</div>
+		</div>
 	</div>
-	<footer class="content footer">
-		
+	<footer>
+		<div class="content">
 			<div class="footerLeft">
 				<p><b>联系我们</b></p>
 				<ul>
@@ -131,7 +122,7 @@
 				<p><b>我们的位置</b></p>
 				<img src="./pics/position.png">
 			</div>
-		
+		</div>
 	</footer>
 </body>
 </html>

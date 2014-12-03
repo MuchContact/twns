@@ -38,6 +38,10 @@ header .leftMenu{
 .leftNavi ul li{
     margin-top: 30px;
 }
+.leftNavi ul li a{
+    text-decoration: blink;
+    color: black;
+}
 
 .middlePic {
     float: left;
@@ -67,25 +71,56 @@ header .leftMenu{
 	padding-bottom: 10px;
 	
 }
-.horizontalGallery > div{
+.galleryItem{
     float: left;
     text-align: center;
-	margin-left: 40px;
+	margin:0 40px;
 }
-.horizontalGallery > div > div:first-child{
+.galleryItemTitle{
     font-weight: bold;
     margin-bottom: 30px;
 }
-.horizontalGallery img{
+.galleryImg{
     width: 200px;
+    background: url(./pics/disk/1TB-disk.jpg)
+    no-repeat;
+    background-size: 200px 200px; 
+}
+.galleryImgMask{ 
+  width:200; 
+  height:200px; 
+  background:#FFF; 
+  opacity:0;
+} 
+.galleryImg:hover .galleryImgMask { 
+  opacity:0.6; 
+  text-align:justify; 
+  color:#000000; 
+  font-size:20px;
+  font-weight:700; 
+  font-family:"Times New Roman", Times, serif;
+  padding-left:30px;
 }
 
-footer img{
-	width: 350px;
+.buttonOverImg{
+  margin-top: 90px;
+  font-size: 20px;  
+  font-weight: 700; 
+  cursor: pointer;
 }
-.footer{
-	clear: both;
+.buttonOverImgSurplus{
+  margin-left: 25px;
+}
+.buttonOverImg:hover {
+  background-color: #4d90fe;
+}
+
+footer{
+    background: none repeat scroll 0 0 #f0f0f0;
 	margin-top: 300px;
+}
+footer img{
+    width: 350px;
 }
 .footerLeft{
 	float: left;
