@@ -67,14 +67,14 @@ function cancelChange(){
 }
 
 function findProduct(title){
-  var products = _.filter(disks,function(disk){
+  var products = filter(disks,function(disk){
                   return disk.name==title; 
                 }
               );
   return products[0];
 }
 function remove(title){
-  disks = _.filter(disks,function(disk){
+  disks = filter(disks,function(disk){
                   return disk.name!=title; 
                 }
               );
@@ -98,9 +98,33 @@ function add() {
 
 function search(){
  var keyWord = $("#search").val();
- var result = _.filter(disks,function(disk){
+ var result = filter(disks,function(disk){
  
   return disk.name.indexOf(keyWord) != -1; 
  });
  dataToView(result);
+}
+
+function map(arr, delegation){
+	if(arr.constructor !== Array){
+		return ;
+	}
+	var newArr = [];
+	for(var i=0; i<arr.length; i++){
+		newArr.push(delegation(arr[i]));
+	}
+	return newArr;
+}
+function filter(arr, delegation){
+	if(arr.constructor !== Array){
+		return ;
+	}
+	console.log("customer filter invoked");
+	var newArr = [];
+	for(var i=0; i<arr.length; i++){
+		if(delegation(arr[i])){
+			newArr.push(arr[i]);
+		}
+	}
+	return newArr;
 }
